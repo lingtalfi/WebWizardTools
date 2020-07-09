@@ -76,6 +76,12 @@ abstract class WebWizardToolsProcess
      */
     protected $disabledReason;
 
+    /**
+     * This property holds the category for this instance.
+     * @var string
+     */
+    protected $category;
+
 
     /**
      * Builds the WebWizardToolsProcess instance.
@@ -91,6 +97,7 @@ abstract class WebWizardToolsProcess
         $this->params = [];
         $this->webWizard = null;
         $this->enabled = true;
+        $this->category = null;
 
     }
 
@@ -262,6 +269,30 @@ abstract class WebWizardToolsProcess
         $this->disabledReason = $disabledReason;
     }
 
+    /**
+     * Returns the category of this instance.
+     *
+     * @return string
+     */
+    public function getCategory(): string
+    {
+        return $this->category;
+    }
+
+    /**
+     * Sets the category.
+     *
+     * @param string $category
+     * @return self
+     */
+    public function setCategory(string $category): self
+    {
+        $this->category = $category;
+        return $this;
+    }
+
+
+
 
 
 
@@ -376,7 +407,6 @@ abstract class WebWizardToolsProcess
     {
         $this->message($msg, "important");
     }
-
 
 
     /**

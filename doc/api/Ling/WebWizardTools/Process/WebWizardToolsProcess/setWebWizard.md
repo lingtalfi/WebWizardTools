@@ -49,7 +49,7 @@ Returns [WebWizardToolsProcess](https://github.com/lingtalfi/WebWizardTools/blob
 
 Source Code
 ===========
-See the source code for method [WebWizardToolsProcess::setWebWizard](https://github.com/lingtalfi/WebWizardTools/blob/master/Process/WebWizardToolsProcess.php#L123-L127)
+See the source code for method [WebWizardToolsProcess::setWebWizard](https://github.com/lingtalfi/WebWizardTools/blob/master/Process/WebWizardToolsProcess.php#L130-L134)
 
 
 See Also

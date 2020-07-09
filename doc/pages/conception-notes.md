@@ -1,6 +1,6 @@
 WebWizardTools, conception notes
 ==========
-2020-07-03 -> 2020-07-06
+2020-07-03 -> 2020-07-09
 
 
 
@@ -237,6 +237,13 @@ When a process is disabled, it's still displayed, but grayed out, so that the us
 
 
 
+
+Category
+-----------
+2020-07-09
+
+
+A category helps organize processes in groups at the gui level.
 
 
 

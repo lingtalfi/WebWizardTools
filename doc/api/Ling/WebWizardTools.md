@@ -1,6 +1,6 @@
 Ling/WebWizardTools
 ================
-2020-07-06 --> 2020-07-06
+2020-07-06 --> 2020-07-09
 
 
 
@@ -64,6 +64,8 @@ Table of contents
     - [WebWizardToolsProcess::setEnabled](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/setEnabled.md) &ndash; Sets the enabled.
     - [WebWizardToolsProcess::getDisabledReason](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/getDisabledReason.md) &ndash; Returns the disabledReason of this instance.
     - [WebWizardToolsProcess::setDisabledReason](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/setDisabledReason.md) &ndash; Sets the disabledReason.
+    - [WebWizardToolsProcess::getCategory](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/getCategory.md) &ndash; Returns the category of this instance.
+    - [WebWizardToolsProcess::setCategory](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/setCategory.md) &ndash; Sets the category.
     - [WebWizardToolsProcess::execute](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/execute.md) &ndash; Executes the process.
 - [WebWizardToolsReport](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Report/WebWizardToolsReport.md) &ndash; The WebWizardToolsReport class.
     - [WebWizardToolsReport::__construct](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Report/WebWizardToolsReport/__construct.md) &ndash; Builds the WebWizardToolsReport instance.

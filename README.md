@@ -1,6 +1,6 @@
 WebWizardTools
 ===========
-2020-07-06
+2020-07-06 -> 2020-07-09
 
 
 
@@ -38,6 +38,10 @@ Summary
 History Log
 =============
 
+- 1.1.0 -- 2020-07-09
+
+    - add category to processes
+    
 - 1.0.0 -- 2020-07-06
 
     - initial commit

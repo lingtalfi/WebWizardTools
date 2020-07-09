@@ -4,7 +4,7 @@
 
 The WebWizardToolsProcess class
 ================
-2020-07-06 --> 2020-07-06
+2020-07-06 --> 2020-07-09
 
 
 
@@ -34,6 +34,7 @@ abstract class <span class="pl-k">WebWizardToolsProcess</span>  {
     - protected array [$params](#property-params) ;
     - protected bool [$enabled](#property-enabled) ;
     - protected string [$disabledReason](#property-disabledReason) ;
+    - protected string [$category](#property-category) ;
 
 - Methods
     - public [__construct](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/__construct.md)() : void
@@ -53,6 +54,8 @@ abstract class <span class="pl-k">WebWizardToolsProcess</span>  {
     - public [setEnabled](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/setEnabled.md)(bool $enabled) : void
     - public [getDisabledReason](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/getDisabledReason.md)() : string
     - public [setDisabledReason](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/setDisabledReason.md)(string $disabledReason) : void
+    - public [getCategory](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/getCategory.md)() : string
+    - public [setCategory](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/setCategory.md)(string $category) : self
     - public [execute](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/execute.md)(?array $options = []) : void
     - abstract protected [doExecute](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/doExecute.md)(?array $options = []) : void
     - protected [getContextVar](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/getContextVar.md)(string $varName, ?$defaultValue = null, ?bool $throwEx = true) : void
@@ -129,6 +132,12 @@ Properties
     
     
 
+- <span id="property-category"><b>category</b></span>
+
+    This property holds the category for this instance.
+    
+    
+
 
 
 Methods
@@ -151,6 +160,8 @@ Methods
 - [WebWizardToolsProcess::setEnabled](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/setEnabled.md) &ndash; Sets the enabled.
 - [WebWizardToolsProcess::getDisabledReason](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/getDisabledReason.md) &ndash; Returns the disabledReason of this instance.
 - [WebWizardToolsProcess::setDisabledReason](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/setDisabledReason.md) &ndash; Sets the disabledReason.
+- [WebWizardToolsProcess::getCategory](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/getCategory.md) &ndash; Returns the category of this instance.
+- [WebWizardToolsProcess::setCategory](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/setCategory.md) &ndash; Sets the category.
 - [WebWizardToolsProcess::execute](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/execute.md) &ndash; Executes the process.
 - [WebWizardToolsProcess::doExecute](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/doExecute.md) &ndash; Executes the process.
 - [WebWizardToolsProcess::getContextVar](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/getContextVar.md) &ndash; Returns a variable from the wizard context.

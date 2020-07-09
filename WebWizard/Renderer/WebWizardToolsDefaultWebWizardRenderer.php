@@ -48,26 +48,9 @@ class WebWizardToolsDefaultWebWizardRenderer implements WebWizardToolsWebWizardR
     public function render(WebWizardToolsWebWizard $wizard)
     {
 
-
-        $processes = $wizard->getProcesses();
-        $processKeyName = $wizard->getProcessKeyName();
-        $triggerExtraParams = $wizard->getTriggerExtraParams();
-
-        $executedProcess = $wizard->run();
-
-
-        ?>
-        <?php if (null !== $executedProcess):
-        $report = $executedProcess->getReport();
-        $isSuccessful = $report->isSuccessful();
-        $traceMessages = $report->getTraceMessages();
-        $infoMessages = $report->getInfoMessages();
-        $importantMessages = $report->getImportantMessages();
-
         ?>
 
-
-        <style>
+        <style type="text/css">
             .error {
                 color: red;
             }
@@ -99,12 +82,16 @@ class WebWizardToolsDefaultWebWizardRenderer implements WebWizardToolsWebWizardR
                 border-collapse: collapse;
             }
 
-            .process-table, .process-table tr, .process-table td {
-                border: 1px solid #ddd;
+            .process-table, .process-table tr, .process-table td, .process-table th {
+                border: 1px solid #666;
             }
 
             .process-table td {
                 padding: 4px;
+            }
+
+            .process-table th{
+                cursor: pointer;
             }
 
             .process-disabled span {
@@ -116,13 +103,33 @@ class WebWizardToolsDefaultWebWizardRenderer implements WebWizardToolsWebWizardR
                 padding-bottom: 5px;
             }
 
-            .result{
+            .result {
                 margin-bottom: 10px;
             }
 
 
+
+
         </style>
 
+
+        <?php
+        $processes = $wizard->getProcesses();
+        $processKeyName = $wizard->getProcessKeyName();
+        $triggerExtraParams = $wizard->getTriggerExtraParams();
+
+        $executedProcess = $wizard->run();
+
+
+        ?>
+        <?php if (null !== $executedProcess):
+        $report = $executedProcess->getReport();
+        $isSuccessful = $report->isSuccessful();
+        $traceMessages = $report->getTraceMessages();
+        $infoMessages = $report->getInfoMessages();
+        $importantMessages = $report->getImportantMessages();
+
+        ?>
         <div class="result">
 
             <h3 class="line-title">Report
@@ -214,18 +221,22 @@ class WebWizardToolsDefaultWebWizardRenderer implements WebWizardToolsWebWizardR
 
         <div class="tasklist">
             <h3>Available processes</h3>
-            <table class="process-table">
+            <table class="process-table" id="the-process-table">
 
                 <tr>
-                    <td>Label</td>
-                    <td>Learn more</td>
-                    <td>Disabled reason</td>
+                    <th>Category</th>
+                    <th>Label</th>
+                    <th>Learn more</th>
+                    <th>Disabled reason</th>
                 </tr>
                 <?php foreach ($processes as $process):
                     $isEnabled = $process->isEnabled();
                     $sClass = (true === $isEnabled) ? "process-enabled" : "process-disabled";
                     ?>
                     <tr class="<?php echo $sClass; ?>">
+                        <td>
+                            <?php echo $process->getCategory(); ?>
+                        </td>
                         <td>
                             <?php if (true === $isEnabled): ?>
                                 <form method="post" action="#">
@@ -265,6 +276,24 @@ class WebWizardToolsDefaultWebWizardRenderer implements WebWizardToolsWebWizardR
 
 
         <script>
+
+
+            const getCellValue = (tr, idx) => tr.children[idx].innerText || tr.children[idx].textContent;
+
+            const comparer = (idx, asc) => (a, b) => ((v1, v2) =>
+                    v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
+            )(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
+
+
+            // do the work...
+            document.querySelectorAll('#the-process-table th').forEach(th => th.addEventListener('click', (() => {
+                const table = th.closest('table');
+                Array.from(table.querySelectorAll('tr:nth-child(n+2)'))
+                    .sort(comparer(Array.from(th.parentNode.children).indexOf(th), this.asc = !this.asc))
+                    .forEach(tr => table.appendChild(tr));
+            })));
+
+
             document.addEventListener("DOMContentLoaded", function (event) {
                 $(document).ready(function () {
                     $('.wwt-trigger').on('click', function () {

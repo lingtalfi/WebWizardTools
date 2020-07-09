@@ -118,7 +118,7 @@ class WebWizardToolsDefaultWebWizardRenderer implements WebWizardToolsWebWizardR
         $processKeyName = $wizard->getProcessKeyName();
         $triggerExtraParams = $wizard->getTriggerExtraParams();
 
-        $executedProcess = $wizard->run();
+        $executedProcess = $wizard->getExecutedProcess();
 
 
         ?>

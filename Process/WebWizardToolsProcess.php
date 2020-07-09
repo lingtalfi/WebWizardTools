@@ -101,6 +101,18 @@ abstract class WebWizardToolsProcess
 
     }
 
+
+    /**
+     * An opportunity for the process to create the controls, and/or to change the label of the process dynamically.
+     *
+     * @overrideme
+     */
+    public function prepare()
+    {
+
+    }
+
+
     /**
      * Returns the report of this instance.
      *

@@ -53,7 +53,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [WebWizardToolsProcess::message](https://github.com/lingtalfi/WebWizardTools/blob/master/Process/WebWizardToolsProcess.php#L428-L450)
+See the source code for method [WebWizardToolsProcess::message](https://github.com/lingtalfi/WebWizardTools/blob/master/Process/WebWizardToolsProcess.php#L440-L462)
 
 
 See Also

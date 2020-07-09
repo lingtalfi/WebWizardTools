@@ -79,6 +79,13 @@ class WebWizardToolsWebWizard
 
 
     /**
+     * This property holds the currentProcess for this instance.
+     * @var WebWizardToolsProcess = null
+     */
+    private $currentProcess;
+
+
+    /**
      * Builds the WebWizardToolsWebWizard instance.
      */
     public function __construct()
@@ -93,6 +100,7 @@ class WebWizardToolsWebWizard
             return true;
         };
         $this->onProcessSuccessMessage = null;
+        $this->currentProcess = null;
     }
 
 
@@ -121,12 +129,25 @@ class WebWizardToolsWebWizard
 
 
     /**
-     * Returns the currently executed process if any, or null otherwise.
+     * Prepares all processes, and executes the called one if any.
      *
-     * @return WebWizardToolsProcess|null
      */
-    public function run(): ?WebWizardToolsProcess
+    public function run()
     {
+        $this->currentProcess = null;
+
+        /**
+         * Basically the idea is to let processes set the default values for controls.
+         * Those values might be overridden by the process when we call the execute method (in the next block).
+         * And so when the rendering occurs, we will be able to display either the default value, or the overridden value.
+         *
+         * This assumes that the run method is called before the render method.
+         */
+        foreach ($this->processes as $process) {
+            $process->prepare($this);
+        }
+
+
         if (array_key_exists($this->processKeyName, $_POST)) {
             $processName = $_POST[$this->processKeyName];
 
@@ -135,6 +156,7 @@ class WebWizardToolsWebWizard
                 $process->setParams($_POST);
                 $options = []; // ?
                 $process->execute($options);
+                $this->currentProcess = $process;
                 return $this->processes[$processName];
             } else {
                 $this->error("Undefined process $processName.");
@@ -143,6 +165,17 @@ class WebWizardToolsWebWizard
 
         }
         return null;
+    }
+
+
+    /**
+     * Returns the currently executed process if any, or null otherwise.
+     *
+     * @return WebWizardToolsProcess|null
+     */
+    public function getExecutedProcess(): ?WebWizardToolsProcess
+    {
+        return $this->currentProcess;
     }
 
 
@@ -267,6 +300,7 @@ class WebWizardToolsWebWizard
     {
         return $this->context;
     }
+
 
     /**
      * Returns the processKeyName of this instance.

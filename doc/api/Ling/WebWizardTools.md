@@ -1,6 +1,6 @@
 Ling/WebWizardTools
 ================
-2020-07-06 --> 2020-07-09
+2020-07-06 --> 2020-07-24
 
 
 
@@ -68,6 +68,7 @@ Table of contents
     - [WebWizardToolsProcess::getCategory](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/getCategory.md) &ndash; Returns the category of this instance.
     - [WebWizardToolsProcess::setCategory](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/setCategory.md) &ndash; Sets the category.
     - [WebWizardToolsProcess::execute](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/execute.md) &ndash; Executes the process.
+    - [WebWizardToolsProcess::addLogMessage](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/addLogMessage.md) &ndash; Adds a message of the given type to the log.
 - [WebWizardToolsReport](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Report/WebWizardToolsReport.md) &ndash; The WebWizardToolsReport class.
     - [WebWizardToolsReport::__construct](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Report/WebWizardToolsReport/__construct.md) &ndash; Builds the WebWizardToolsReport instance.
     - [WebWizardToolsReport::isSuccessful](https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Report/WebWizardToolsReport/isSuccessful.md) &ndash; Returns whether the report is successful.

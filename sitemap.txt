@@ -28,6 +28,7 @@ https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTo
 https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Controls/WebWizardToolsOptionList.md
 https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Exception/WebWizardToolsException.md
 https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/__construct.md
+https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/addLogMessage.md
 https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/doExecute.md
 https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/error.md
 https://github.com/lingtalfi/WebWizardTools/blob/master/doc/api/Ling/WebWizardTools/Process/WebWizardToolsProcess/errorMessage.md

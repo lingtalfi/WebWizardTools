@@ -333,6 +333,19 @@ abstract class WebWizardToolsProcess
     }
 
 
+    /**
+     * Adds a message of the given type to the log.
+     *
+     *
+     * @param string $msg
+     * @param string $type
+     */
+    public function addLogMessage(string $msg, string $type)
+    {
+        $this->message($msg, $type);
+    }
+
+
     //--------------------------------------------
     //
     //--------------------------------------------

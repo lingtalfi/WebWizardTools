@@ -59,7 +59,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [WebWizardToolsProcess::getContextVar](https://github.com/lingtalfi/WebWizardTools/blob/master/Process/WebWizardToolsProcess.php#L365-L375)
+See the source code for method [WebWizardToolsProcess::getContextVar](https://github.com/lingtalfi/WebWizardTools/blob/master/Process/WebWizardToolsProcess.php#L378-L388)
 
 
 See Also

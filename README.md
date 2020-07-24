@@ -1,6 +1,6 @@
 WebWizardTools
 ===========
-2020-07-06 -> 2020-07-09
+2020-07-06 -> 2020-07-24
 
 
 
@@ -38,6 +38,10 @@ Summary
 History Log
 =============
 
+- 1.3.0 -- 2020-07-24
+
+    - update WebWizardToolsDefaultWebWizardRenderer, default theme now has grouped categories 
+    
 - 1.2.0 -- 2020-07-09
 
     - update api
